@@ -7,10 +7,7 @@
 	"name": "old-pros",
 	"compatibility_date": "2025-10-11",
 	"pages_build_output_dir": "./public",
-	"assets": {
-		// The path to the directory containing the `index.html` file to be served at `/`
-		"directory": "./public"
-	},
+
 	"observability": {
 		"enabled": true
 	}
