@@ -1,0 +1,9 @@
+name = "old-pros"
+compatibility_date = "2025-10-17"
+pages_build_output_dir = "./public"
+functions = "./functions"
+
+[[r2_buckets]]
+binding = "image_assets"
+bucket_name = "image-assets"
+preview_bucket_name = "image-assets"
