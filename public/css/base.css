@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.site-header,
+.site-footer {
+  background: #810cb8;
+  color: #e7e3e8;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.column-left {
+  flex: 1;
+  background: #810cb8;
+  padding: 1rem;
+}
+
+.column-right {
+  flex: 2;
+  padding: 1rem;
+}
+
+body {
+  color: white;
+  background-color: #000; /* Optional: for contrast */
+}
