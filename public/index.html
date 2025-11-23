@@ -3,154 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Old Pros — Where Experience Leads</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background-color: #601fd7;
-      color: white;
-    }
-
-    .site-header,
-    .site-footer {
-      background-color: #601fd7;
-      padding: 1rem 2rem;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    .main-nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .main-nav a:hover {
-      text-decoration: underline;
-      opacity: 0.8;
-    }
-
-    .gold-band {
-      height: 8px;
-      background-color: gold;
-      width: 100%;
-    }
-
-    .main-content {
-      display: flex;
-      padding: 2rem;
-      gap: 2rem;
-    }
-
-    .column-left {
-      flex: 1;
-      background-color: #601fd7;
-      padding: 1rem;
-    }
-
-    .column-right {
-      flex: 2;
-      background-color: #601fd7;
-      padding: 1rem;
-    }
-
-    .section-banner {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .leadership-grid {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .leader-card {
-      flex: 1;
-      min-width: 150px;
-      text-align: center;
-    }
-
-    .leader-card img {
-      width: 100%;
-      max-width: 200px;
-      border-radius: 8px;
-      border: 2px solid gold;
-    }
-
-    .site-footer {
-      text-align: center;
-    }
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      border: 2px solid red; /* for visibility */
-}
-
-  </style>
+  <title>Old Pros — Experience Matters</title>
+  <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header class="site-header">
-    <div class="logo">Old Pros</div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/insights">Insights</a></li>
-        <li><a href="/team">Team</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/register">Register</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="logo">Old Pros</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/insights">Insights</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/register">Register</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Gold band -->
   <div class="gold-band"></div>
 
+  <!-- Main content -->
   <main class="main-content">
-    <div class="column-left">
-      <h1>Where</h1>
-      <h1>Experience</h1>
-      <h1>Leads</h1>
-    </div>
-    <div class="column-right">
-      <h1 class="section-banner">Leadership</h1>
-      <div class="leadership-grid">
-        <div class="leader-card">
-          <img src="/images/security.jpg" alt="Security Lead" />
-          <p>Security</p>
-        </div>
-        <div class="leader-card">
-          <img src="images/content.jpg" alt="Content Lead" />
-          <p>Content</p>
-        </div>
-        <div class="leader-card">
-          <img src="/images/delivery.jpg" alt="Delivery Lead" />
-          <p>Delivery</p>
-        </div>
-        <div class="leader-card">
-          <img src="images/commercial.jpg" alt="Commercial Lead" />
-          <p>Commercials</p>
+    <div class="container">
+
+      <!-- Left column box -->
+      <div class="column-left">
+        <div class="column-box">
+          <h1>Experience Matters</h1>
+          <p>We connect businesses with seasoned professionals who deliver depth, resilience, and long‑term value.</p>
+          <div class="cta-buttons">
+            <a href="/professionals" class="cta">I’m a Professional</a>
+            <a href="/businesses" class="cta">I’m a Business</a>
+          </div>
         </div>
       </div>
+
+      <!-- Right column box -->
+      <div class="column-right">
+        <div class="column-box">
+          <section class="manifesto">
+            <h1>Why Old Pros?</h1>
+            <p>
+              <strong>Depth over dazzle:</strong> Proven expertise, not empty buzzwords.<br>
+              <strong>Delivery over drama:</strong> Results from people who’ve been there before.<br>
+              <strong>Wisdom over hype:</strong> Long‑term thinking in a short‑term world.
+            </p>
+
+            <h2>Who It’s For</h2>
+            <p>
+              <strong>Professionals:</strong> With 15+ years of experience, ready to contribute without chasing titles.<br>
+              <strong>Businesses:</strong> Seeking stability, mentorship, and strategic foresight.<br>
+              <strong>Teams:</strong> That value delivery, resilience, and long‑term impact.
+            </p>
+
+            <h2>What We Offer</h2>
+            <p>
+              A curated talent pool of seasoned experts across industries.<br>
+              Profiles that highlight <em>real‑world impact</em>, not just polished resumes.<br>
+              A hiring experience built for fit, delivery, and lasting value.
+            </p>
+          </section>
+        </div>
+      </div>
+
     </div>
   </main>
 
+  <!-- Gold band -->
   <div class="gold-band"></div>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <p>&copy; 2025 Old Pros. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Old Pros. All rights reserved.</p>
+      <p>Flipping the script on age bias. Because experience isn’t old news — it’s your next advantage.</p>
+    </div>
   </footer>
+
 </body>
 </html>
