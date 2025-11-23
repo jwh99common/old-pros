@@ -12,6 +12,9 @@
   <!-- Header -->
   <div id="header-placeholder"></div>
 
+
+
+
   <!-- Main content -->
   <main class="main-content">
     <div class="container">
@@ -27,40 +30,33 @@
       <div class="column-right">
         <div class="column-box">
           <section class="manifesto">
-            <h1>Why Old Pros?</h1>
-            <p>
-              <strong>Depth over dazzle:</strong> Proven expertise, not empty buzzwords.<br>
-              <strong>Delivery over drama:</strong> Results from people who’ve been there before.<br>
-              <strong>Wisdom over hype:</strong> Long‑term thinking in a short‑term world.
-            </p>
 
-            <h2>Who It’s For</h2>
-            <p>
-              <strong>Professionals:</strong> With 15+ years of experience, ready to contribute without chasing titles.<br>
-              <strong>Businesses:</strong> Seeking stability, mentorship, and strategic foresight.<br>
-              <strong>Teams:</strong> That value delivery, resilience, and long‑term impact.
-            </p>
+            <div class="leadership-grid">
 
-            <h2>What We Offer</h2>
-            <p>
-              A curated talent pool of seasoned experts across industries.<br>
-              Profiles that highlight <em>real‑world impact</em>, not just polished resumes.<br>
-              A hiring experience built for fit, delivery, and lasting value.
-            </p>
+              <div class="leader-card">
+                <img src="/images/security.jpg" alt="Security Lead" />
+                <p>Security: Jamie Whitcombe</p>
+              </div>
+              <div class="leader-card">
+                <img src="/images/content.jpg" alt="Content Lead" />
+                <p>Content: Matt Loup</p>
+              </div>
+              <div class="leader-card">
+                <img src="/images/delivery.jpg" alt="Delivery Lead" />
+                <p>Delivery: John Hardie</p>
+              </div>
+              <div class="leader-card">
+                <img src="/images/commercial.jpg" alt="Commercial Lead" />
+                <p>Commercials: Malcom Harding</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
 
     </div>
   </main>
-
-  <!-- Modal placeholder -->
-  <div id="modal-placeholder"></div>
-
-  <!-- Gold band -->
-  <div class="gold-band"></div>
-
-  <div id="cta-modal" class="modal hidden">
+<div id="cta-modal" class="modal hidden">
   <div class="modal-content">
     <h2>Tell us about yourself</h2>
     <form id="cta-form">
@@ -89,6 +85,10 @@
     </form>
   </div>
 </div>
+
+  <!-- Gold band -->
+  <div class="gold-band"></div>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
@@ -97,9 +97,9 @@
     </div>
   </footer>
 
-<script src="/js/cta.js"></script>
-<script src="/js/inject-header.js"></script>
-<script src="/js/inject-hero.js"></script>
+  <script src="/js/cta.js"></script>
+  <script type="module" src="/js/inject-header.js"></script>
+  <script type="module" src="/js/inject-hero.js"></script>
 
 </body>
 </html>
