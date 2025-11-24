@@ -194,3 +194,52 @@ p {
   margin-top: 0.25rem;
   box-sizing: border-box;
 }
+.accordion {
+  margin: 2rem 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid gold; /* gold divider line */
+}
+
+.accordion-header {
+  background: #601fd7; /* match site background */
+  color: #fff;         /* white text */
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background: gold;    /* gold highlight on hover */
+  color: #601fd7;      /* invert text colour */
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.05); /* subtle translucent box */
+  color: #fff; /* keep text white */
+}
+
+.accordion-content ul {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordion-content li {
+  margin-bottom: 0.5rem;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px; /* adjust as needed */
+  padding: 1rem;
+}

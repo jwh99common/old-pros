@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Old Pros — Experience Matters</title>
   <link rel="stylesheet" href="/css/main.css" />
-
 </head>
 <body>
 
@@ -28,34 +27,51 @@
       <!-- Right column box -->
       <div class="column-right">
         <div class="column-box">
-          <section class="manifesto">
-            <h1>Services: Commercial</h1>
-            <p>
-              <strong>Depth over dazzle:</strong> Proven expertise, not empty buzzwords.<br>
-              <strong>Delivery over drama:</strong> Results from people who’ve been there before.<br>
-              <strong>Wisdom over hype:</strong> Long‑term thinking in a short‑term world.
-            </p>
+          <section class="manifesto accordion">
 
-            <h2>Services: Delivery</h2>
-            <p>
-              <strong>Professionals:</strong> With 15+ years of experience, ready to contribute without chasing titles.<br>
-              <strong>Businesses:</strong> Seeking stability, mentorship, and strategic foresight.<br>
-              <strong>Teams:</strong> That value delivery, resilience, and long‑term impact.
-            </p>
+            <div class="accordion-item">
+              <button class="accordion-header">Commercial Services: Malcom Harding</button>
+              <div class="accordion-content">
+                <ul>
+                  <li><strong>Contract Negotiation Reviews:</strong> Are you getting value for money</li>
+                  <li><strong>MSP Advice and Management:</strong> Are you getting the service you deserve</li>
+                  <li><strong>Transitional Service Agreements:</strong> Make sure you've covered all the bases</li>
+                </ul>
+              </div>
+            </div>
 
-            <h2>Services: Security</h2>
-            <p>
-              A curated talent pool of seasoned experts across industries.<br>
-              Profiles that highlight <em>real‑world impact</em>, not just polished resumes.<br>
-              A hiring experience built for fit, delivery, and lasting value.
-            </p>
+            <div class="accordion-item">
+              <button class="accordion-header">Delivery Services: John Hardie</button>
+              <div class="accordion-content">
+                <ul>
+                  <li><strong>PMO Audits/Setup:</strong> Deliver quickly and consistently</li>
+                  <li><strong>Prioritisation:</strong> Audit, Categorise, Prioritise, Act</li>
+                  <li><strong>Program Recovery:</strong> Get back on track fast</li>
+                </ul>
+              </div>
+            </div>
 
-            <h2>Services: Media</h2>
-            <p>
-              A curated talent pool of seasoned experts across industries.<br>
-              Profiles that highlight <em>real‑world impact</em>, not just polished resumes.<br>
-              A hiring experience built for fit, delivery, and lasting value.
-            </p>
+            <div class="accordion-item">
+              <button class="accordion-header">Security Services: Jamie Whitcombe-Jones</button>
+              <div class="accordion-content">
+                <ul>
+                  <li><strong>Strategy:</strong> High level thinking</li>
+                  <li><strong>Vendors:</strong> Support Vendor Selection</li>
+                  <li><strong>Audit:</strong> Review and fix your current Security Posture</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">Media Services: Mat Loup</button>
+              <div class="accordion-content">
+                <ul>
+                  <li><strong>Strategy:</strong> High level thinking</li>
+                  <li><strong>Thought Leadership:</strong> Build influence and credibility</li>
+                  <li><strong>Sustainability:</strong> Embed long-term resilience</li>
+                </ul>
+              </div>
+            </div>
 
           </section>
         </div>
@@ -63,35 +79,38 @@
 
     </div>
   </main>
-<div id="cta-modal" class="modal hidden">
-  <div class="modal-content">
-    <h2>How can we help?</h2>
-    <form id="cta-form">
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Phone
-        <input type="tel" name="phone" />
-      </label>
-      <label>
-        Note
-        <textarea name="note"></textarea>
-      </label>
 
-      <input type="hidden" name="type" id="cta-type" />
-      <div class="cta-buttons">
-        <button type="submit" class="cta">Submit</button>
-        <button type="button" id="cta-close" class="cta">Close</button>
-      </div>
-    </form>
+  <!-- CTA Modal -->
+  <div id="cta-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>How can we help?</h2>
+      <form id="cta-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" />
+        </label>
+        <label>
+          Note
+          <textarea name="note"></textarea>
+        </label>
+
+        <input type="hidden" name="type" id="cta-type" />
+        <div class="cta-buttons">
+          <button type="submit" class="cta">Submit</button>
+          <button type="button" id="cta-close" class="cta">Close</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
+
   <!-- Gold band -->
   <div class="gold-band"></div>
 
@@ -106,6 +125,15 @@
   <script src="/js/cta-d1.js"></script>
   <script src="/js/inject-header.js"></script>
   <script src="/js/inject-hero.js"></script>
+  <script>
+    // Accordion toggle logic
+    document.querySelectorAll(".accordion-header").forEach((header) => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
