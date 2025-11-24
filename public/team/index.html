@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Old Pros — Experience Matters</title>
   <link rel="stylesheet" href="/css/main.css" />
-
 </head>
 <body>
 
   <!-- Header -->
   <div id="header-placeholder"></div>
-
-
-
 
   <!-- Main content -->
   <main class="main-content">
@@ -29,62 +25,85 @@
       <!-- Right column box -->
       <div class="column-right">
         <div class="column-box">
-          <section class="manifesto">
+          <section class="manifesto accordion">
 
-            <div class="leadership-grid">
-
-              <div class="leader-card">
-                <img src="/images/security.jpg" alt="Security Lead" />
-                <p>Security: Jamie Whitcombe</p>
-              </div>
-              <div class="leader-card">
-                <img src="/images/content.jpg" alt="Content Lead" />
-                <p>Content: Matt Loup</p>
-              </div>
-              <div class="leader-card">
-                <img src="/images/delivery.jpg" alt="Delivery Lead" />
-                <p>Delivery: John Hardie</p>
-              </div>
-              <div class="leader-card">
-                <img src="/images/commercial.jpg" alt="Commercial Lead" />
-                <p>Commercials: Malcom Harding</p>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <img src="/images/security.jpg" alt="Security Lead" class="accordion-img" />
+                <span>Security: Jamie Whitcombe</span>
+              </button>
+              <div class="accordion-content">
+                <p>Jamie leads our security practice, focusing on strategy, vendor selection, and posture audits.</p>
               </div>
             </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <img src="/images/content.jpg" alt="Content Lead" class="accordion-img" />
+                <span>Content: Matt Loup</span>
+              </button>
+              <div class="accordion-content">
+                <p>Matt drives media and thought leadership, helping clients build influence and sustainable narratives.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <img src="/images/delivery.jpg" alt="Delivery Lead" class="accordion-img" />
+                <span>Delivery: John Hardie</span>
+              </button>
+              <div class="accordion-content">
+                <p>John specialises in PMO audits, prioritisation frameworks, and program recovery for complex initiatives.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <img src="/images/commercial.jpg" alt="Commercial Lead" class="accordion-img" />
+                <span>Commercials: Malcom Harding</span>
+              </button>
+              <div class="accordion-content">
+                <p>Malcom provides commercial oversight, contract negotiation reviews, and transitional service agreements.</p>
+              </div>
+            </div>
+
           </section>
         </div>
       </div>
 
     </div>
   </main>
-<div id="cta-modal" class="modal hidden">
-  <div class="modal-content">
-    <h2>How can we help?</h2>
-    <form id="cta-form">
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Phone
-        <input type="tel" name="phone" />
-      </label>
-      <label>
-        Note
-        <textarea name="note"></textarea>
-      </label>
 
-      <input type="hidden" name="type" id="cta-type" />
-      <div class="cta-buttons">
-        <button type="submit" class="cta">Submit</button>
-        <button type="button" id="cta-close" class="cta">Close</button>
-      </div>
-    </form>
+  <!-- CTA Modal -->
+  <div id="cta-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>How can we help?</h2>
+      <form id="cta-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" />
+        </label>
+        <label>
+          Note
+          <textarea name="note"></textarea>
+        </label>
+
+        <input type="hidden" name="type" id="cta-type" />
+        <div class="cta-buttons">
+          <button type="submit" class="cta">Submit</button>
+          <button type="button" id="cta-close" class="cta">Close</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 
   <!-- Gold band -->
   <div class="gold-band"></div>
@@ -100,6 +119,15 @@
   <script src="/js/cta-d1.js"></script>
   <script src="/js/inject-header.js"></script>
   <script src="/js/inject-hero.js"></script>
+  <script>
+    // Accordion toggle logic
+    document.querySelectorAll(".accordion-header").forEach((header) => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 
 </body>
 </html>

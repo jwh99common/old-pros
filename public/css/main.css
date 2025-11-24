@@ -243,3 +243,16 @@ p {
   max-height: 500px; /* adjust as needed */
   padding: 1rem;
 }
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.accordion-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
