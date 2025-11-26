@@ -216,7 +216,13 @@ p {
   opacity: 0.95;
   transform: scale(1.05);   /* subtle grow on hover */
 }
-
+#cta-form textarea {
+  width: 100%;       /* full width of form */
+  min-height: 150px; /* taller box */
+  padding: 0.5rem;   /* breathing room inside */
+  font-size: 1rem;   /* readable text */
+  resize: vertical;  /* allow user to drag taller if needed */
+}
 
 /* Footer */
 /* Fixed footer */
@@ -232,12 +238,14 @@ p {
   z-index: 1000;
   font-size: 0.8rem;      /* smaller text */
   line-height: 1.2;       /* tighter line spacing */
+    user-select: text;       /* allow text selection */
+  pointer-events: auto;
 }
 
 .site-footer p {
   margin: 0.25rem 0;      /* minimal spacing between lines */
+  user-select: text;
 }
-
 
 
 /* Leadership grid */
