@@ -37,7 +37,13 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  font-size: 3rem;     /* increase size (adjust as needed) */
+  font-weight: bold;   /* make it bold */
+  letter-spacing: 0.05em; /* optional: adds a touch of spacing for logo feel */
+  color: #ffffff;      /* keep it brand‑aligned (adjust to your palette) */
+  margin-left: -2.3rem; /* pull logo slightly left */
 }
+
 .logo-img {
   height: 40px;
   width: auto;
@@ -80,6 +86,7 @@ body {
 .main-content {
   padding-top: 80px;   /* offset header height */
   padding-bottom: 60px; /* offset footer height */
+  margin-top: 2rem; /* push body down so it clears the header */
 }
 .main-content .container {
   display: grid;
@@ -252,17 +259,17 @@ p {
 }
 .accordion-item {
   border: none;              /* remove bottom divider */
-  margin-bottom: 1rem;       /* add spacing instead of box lines */
+  margin-bottom: 1.5rem;       /* add spacing instead of box lines */
 }
 
 .accordion-header {
-  background: transparent;   /* no background */
+  background:#f9f9f9;   /* no background */
   color: #000000;            /* black text */
   border: none;              /* no border */
   width: 100%;
   text-align: left;
   padding: 0;                /* remove box padding */
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -296,6 +303,14 @@ p {
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
+}
+.accordion-header:hover {
+  background: #eaeaea;
+  color: #0047ab;
+}
+.accordion-header.active {
+  background: #0047ab;
+  color: #fff;
 }
 /* Modal buttons */
 .modal-buttons {
