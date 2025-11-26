@@ -120,6 +120,47 @@ body {
   justify-content: left; /* centers the button horizontally */
   margin-top: 1rem;
 }
+.hero-email {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0047ab; /* brand accent */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.hero-email:hover {
+  background-color: #003580; /* darker on hover */
+}
+.hero-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space between button and text */
+  margin-top: 1rem;
+}
+
+.hero-email {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0047ab;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.hero-email:hover {
+  background-color: #003580;
+}
+
+.hero-address {
+  font-size: 2rem;
+  color: #000;
+}
 
 /* Headings & text rhythm */
 h1,
@@ -312,6 +353,49 @@ p {
   background: #0047ab;
   color: #fff;
 }
+
+.accordion-content li {
+  position: relative;
+  padding-right: 2rem; /* space for arrow */
+  margin-bottom: 0.75rem;
+}
+
+.accordion-content li::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0047ab;        /* brand accent color */
+  font-weight: bold;
+}
+.accordion-header {
+  background: #f9f9f9;
+  color: #000;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes arrow to the right */
+}
+
+.accordion-header::after {
+  content: "➔";          /* arrow symbol */
+  font-size: 1.25rem;
+  color: #0047ab;        /* brand accent */
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+  transform: rotate(90deg); /* rotate arrow when open */
+  color: #fff;              /* invert color on active header */
+}
+
 /* Modal buttons */
 .modal-buttons {
   margin-top: 1rem;
