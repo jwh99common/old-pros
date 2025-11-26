@@ -11,7 +11,6 @@
   <!-- Header -->
   <div id="header-placeholder"></div>
 
-  <!-- Gold band -->
 
   <!-- Main content -->
   <main class="main-content">
@@ -28,10 +27,11 @@
       <!-- Right column box -->
       <div class="column-right">
         <div class="column-box">
+          <h1>Services Tailored to Your Needs</h1>
           <section class="manifesto accordion">
 
             <div class="accordion-item">
-              <button class="accordion-header">Commercial Services: </button>
+              <button class="accordion-header">MSP Management: </button>
               <div class="accordion-content">
                 <ul>
                   <li><strong>Contract Negotiation Reviews:</strong> Are you getting value for money</li>
@@ -104,28 +104,22 @@
         </label>
 
         <input type="hidden" name="type" id="cta-type" />
-        <div class="cta-buttons">
-          <button type="submit" class="cta">Submit</button>
-          <button type="button" id="cta-close" class="cta">Close</button>
-        </div>
+        <div class="modal-buttons">
+          <button type="submit" class="modal-button">Submit</button>
+          <button type="button" id="cta-close" class="modal-button">Close</button>
+        </div>    
       </form>
     </div>
   </div>
 
-  <!-- Gold band -->
-  <div class="gold-band"></div>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Old Pros. All rights reserved.</p>
-      <p>Flipping the script on age bias. Because experience isn’t old news — it’s your next advantage.</p>
-    </div>
-  </footer>
-  
+
+
   <script src="/js/cta-d1.js"></script>
   <script src="/js/inject-header.js"></script>
   <script src="/js/inject-hero.js"></script>
+  <script src="/js/inject-footer.js"></script>
+  
   <script>
     // Accordion toggle logic
     document.querySelectorAll(".accordion-header").forEach((header) => {
