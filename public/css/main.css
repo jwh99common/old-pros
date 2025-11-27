@@ -371,15 +371,3 @@ main {
 .site-footer {
   flex-shrink: 0; /* stays at bottom */
 }
-/* Footer links */
-.footer-links a,
-.site-footer a {
-  color: #fff;              /* white text */
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.footer-links a:hover,
-.site-footer a:hover {
-  text-decoration: underline;
-}
