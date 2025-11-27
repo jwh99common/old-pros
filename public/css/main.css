@@ -365,8 +365,8 @@ html, body {
 }
 /* Global font size tweak */
 body {
-  font-size: 0.8rem;   /* slightly smaller than default (usually 1rem) */
-  line-height: 1.5;    /* keep readability */
+  font-size: 0.7rem;   /* slightly smaller than default (usually 1rem) */
+  line-height: 1.2;    /* keep readability */
 }
 
 /* Headings scale down proportionally */
