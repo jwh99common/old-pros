@@ -10,10 +10,11 @@ body { font-family: Helvetica, Arial, sans-serif; line-height: 1.5; }
   padding: 0 20px;     /* consistent gutter */
   box-sizing: border-box;
 }
-.main-content .container {
+main .container {
   display: grid;
-  grid-template-columns: 350px 1fr; /* fixed left, flexible right */
+  grid-template-columns: 1fr 2fr;
   gap: 2rem;
+  align-items: start;
 }
 
 /* Header */
