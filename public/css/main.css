@@ -60,17 +60,27 @@ main .container {
 
 /* Main content */
 main {
+  flex: 1;
   padding-top: 80px;   /* offset fixed header */
   padding-bottom: 60px;
 }
 
 /* Footer */
+/* Fixed Footer */
 .site-footer {
-  background: #0047ab;
-  color: #fff;
+  position: fixed;       /* pin to viewport */
+  bottom: 0;             /* stick to bottom */
+  left: 0;
+  width: 100%;           /* span full width */
+  background: #0047ab;   /* keep brand cobalt blue */
+  color: #fff;           /* white text */
   text-align: center;
   padding: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* subtle lift */
+  z-index: 1000;         /* stay above content */
 }
+
 /* === Accordion Styling === */
 
 /* Accordion container */
@@ -184,39 +194,41 @@ main {
   margin-bottom: 0.5rem;
 }
 /* === Contact Us Button Styling === */
-/* === Hero CTA Button Styling === */
+
+/* === Hero CTA Button Styling (Large, Left-Aligned, Blue Border) === */
 
 .cta-buttons {
   margin-top: 2rem;
-  text-align: center; /* center the button under hero text */
+  text-align: left; /* align button to the left under hero text */
 }
 
 .cta {
   display: inline-block;
-  padding: 0.75rem 1.75rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  background: #0047ab;          /* cobalt blue brand color */
-  border: none;
+  padding: 1rem 2rem;          /* larger size */
+  font-size: 1.2rem;           /* bigger text */
+  font-weight: 700;
+  color: #000;                 /* black text */
+  background: #ffeb3b;         /* bright yellow background */
+  border: 3px solid #0047ab;   /* bold cobalt blue border */
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .cta:hover {
-  background: #003a8c;          /* darker blue on hover */
-  transform: translateY(-2px);  /* subtle lift */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  background: #fdd835;         /* slightly darker yellow on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .cta:active {
-  background: #002f70;          /* pressed state */
+  background: #fbc02d;         /* pressed state */
   transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
+
 
 /* Optional gold variant for emphasis */
 .cta.gold {
@@ -226,4 +238,214 @@ main {
 
 .cta.gold:hover {
   background: #e6c200;
+}
+/* === Modal Styling === */
+
+/* Overlay */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* semi-transparent backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+/* === Modal Buttons: Yellow with Black Text === */
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;                 /* black text */
+  background: #ffeb3b;         /* bright yellow */
+  border: 3px solid #0047ab;   /* cobalt blue border */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.modal-button:hover {
+  background: #fdd835;         /* slightly darker yellow */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.modal-button:active {
+  background: #fbc02d;         /* pressed state */
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+.modal-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #0047ab; /* brand cobalt blue */
+}
+
+/* Form fields */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+  width: 100%;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #0047ab;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,71,171,0.2);
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-button {
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-button:first-of-type {
+  background: #0047ab;
+  color: #fff;
+}
+
+.modal-button:first-of-type:hover {
+  background: #003a8c;
+  transform: translateY(-2px);
+}
+
+.modal-button:last-of-type {
+  background: #ccc;
+  color: #333;
+}
+
+.modal-button:last-of-type:hover {
+  background: #bbb;
+}
+/* Ensure full height layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.site-header {
+  flex-shrink: 0; /* stays at top */
+}
+
+/* Main content fills the gap */
+main {
+  flex: 1;        /* expands to fill space */
+  padding-top: 80px;   /* offset for fixed header */
+  padding-bottom: 60px; /* breathing room above footer */
+}
+
+/* Footer */
+.site-footer {
+  flex-shrink: 0; /* stays at bottom */
+}
+/* Footer links */
+.footer-links a,
+.site-footer a {
+  color: #fff;              /* white text */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+}
+/* === Modal Buttons: Yellow with Black (override) === */
+
+.modal .modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal .modal-buttons .modal-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;                 /* black text */
+  background: #ffeb3b;         /* bright yellow */
+  border: 3px solid #0047ab;   /* cobalt blue border */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Hover + active */
+.modal .modal-buttons .modal-button:hover {
+  background: #fdd835;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.modal .modal-buttons .modal-button:active {
+  background: #fbc02d;
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
