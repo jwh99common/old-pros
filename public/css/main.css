@@ -360,3 +360,7 @@ html, body {
   flex-shrink: 0; /* stays at top */
 }
 
+/* Add bottom spacing to column boxes */
+.column-box {
+  margin-bottom: 2rem;   /* or try 3–4rem if you want more space */
+}
