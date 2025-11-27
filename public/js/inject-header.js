@@ -6,3 +6,5 @@ fetch('/partials/header.html')
     // Dispatch event so other scripts can hook in if needed
     document.dispatchEvent(new Event('headerReady'));
   });
+
+  

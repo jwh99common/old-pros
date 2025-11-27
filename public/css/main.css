@@ -238,16 +238,21 @@ p {
   z-index: 1000;
   font-size: 0.8rem;      /* smaller text */
   line-height: 1.2;       /* tighter line spacing */
-    user-select: text;       /* allow text selection */
+  user-select: text;       /* allow text selection */
   pointer-events: auto;
-}
-
-.site-footer p {
   margin: 0.25rem 0;      /* minimal spacing between lines */
   user-select: text;
+  text-decoration: none;
 }
 
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
+.site-footer a:hover {
+  text-decoration: underline;
+}
 /* Leadership grid */
 .leadership-grid {
   display: flex;
@@ -312,19 +317,24 @@ p {
 }
 
 .accordion-header {
-  background:#f9f9f9;   /* no background */
-  color: #000000;            /* black text */
-  border: none;              /* no border */
+  background: #f9f9f9;
+  color: #000000;
+  border: none;
   width: 100%;
   text-align: left;
-  padding: 0;                /* remove box padding */
+  padding: 0;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s ease;
   display: flex;
-  align-items: center;
+  align-items: center; /* vertically center image + text */
   gap: 1rem;
+}
+
+.accordion-header span {
+  flex: 1;
+  text-align: left;
 }
 
 .accordion-header:hover {
