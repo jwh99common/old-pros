@@ -385,7 +385,7 @@ html, body {
 }
 /* Global font size tweak */
 body {
-  font-size: 0.8rem;   /* slightly smaller than default (usually 1rem) */
+  font-size: 1rem;   /* slightly smaller than default (usually 1rem) */
   line-height: 1.5;    /* keep readability */
 }
 
