@@ -9,11 +9,12 @@ body {
 
 /* Single source of truth for gutters */
 .container {
-  max-width: 1600px;
+  max-width: 1100px;   /* narrower cap */
   margin: 0 auto;
-  padding: 0;
+  padding: 0 3rem;     /* match header gutters */
   box-sizing: border-box;
 }
+
 
 /* Header: fixed at top */
 .site-header {
@@ -97,6 +98,11 @@ body {
   align-items: start;
   padding: 0 0;   /* match header’s left/right padding */
   box-sizing: border-box;
+}
+.main-content .container {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* fixed left, flexible right */
+  gap: 2rem;
 }
 
 .column-box {
@@ -427,4 +433,9 @@ p {
 
 .modal-button:hover {
   opacity: 0.85;
+}
+@media (max-width: 1024px) {
+  .main-content .container {
+    grid-template-columns: 1fr; /* collapse to single column */
+  }
 }
