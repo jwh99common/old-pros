@@ -415,37 +415,3 @@ main {
 .site-footer a:hover {
   text-decoration: underline;
 }
-/* === Modal Buttons: Yellow with Black (override) === */
-
-.modal .modal-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.modal .modal-buttons .modal-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #000;                 /* black text */
-  background: #ffeb3b;         /* bright yellow */
-  border: 3px solid #0047ab;   /* cobalt blue border */
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* Hover + active */
-.modal .modal-buttons .modal-button:hover {
-  background: #fdd835;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-.modal .modal-buttons .modal-button:active {
-  background: #fbc02d;
-  transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-}
