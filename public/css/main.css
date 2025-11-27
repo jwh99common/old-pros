@@ -9,7 +9,7 @@ body {
 
 /* Single source of truth for gutters */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -89,11 +89,14 @@ body {
   padding-bottom: 60px; /* offset footer height */
   margin-top: 2rem; /* push body down so it clears the header */
 }
+
 .main-content .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  /*gap: 1rem;*/
-  /*align-items: start;*/
+  gap: 1rem;
+  align-items: start;
+  padding: 0 0;   /* match header’s left/right padding */
+  box-sizing: border-box;
 }
 
 .column-box {
