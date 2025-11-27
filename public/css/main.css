@@ -363,3 +363,21 @@ html, body {
 .column-box {
   margin-bottom: 2rem;   /* or try 3–4rem if you want more space */
 }
+/* Global font size tweak */
+body {
+  font-size: 0.9rem;   /* slightly smaller than default (usually 1rem) */
+  line-height: 1.5;    /* keep readability */
+}
+
+/* Headings scale down proportionally */
+h1 {
+  font-size: 1.8rem;   /* was ~2rem */
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 0.95rem;
+}
