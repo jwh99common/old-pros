@@ -1,16 +1,21 @@
 /* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Helvetica, Arial, sans-serif; line-height: 1.5; }
-
-/* Container */
-
-.container {
-  width: 100%;                        /* always fill available width */
-  max-width: 1400px;                  /* cap on large screens */
-  margin: 0 auto;                     /* center horizontally */
-  padding: 0 20px;                    /* consistent gutter */
-  box-sizing: border-box;
+body { 
+  font-family: Helvetica, Arial, sans-serif; 
+  line-height: 1.5; 
+  font-size: 1rem
 }
+
+/* Ensure full height layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+
+
+  flex-direction: column;
+}
+
 
 main .container {
   display: grid;
@@ -70,8 +75,8 @@ main .container {
 /* Main content */
 main {
   flex: 1;
-  padding-top: 80px;   /* offset fixed header */
-  padding-bottom: 80px;
+  padding-top: 0px;   /* offset fixed header */
+  padding-bottom: 20px;
 }
 
 /* Fixed Footer */
@@ -101,8 +106,7 @@ main {
 .site-footer a:hover {
   text-decoration: underline;
 }
-
-/* === Accordion Styling === */
+/* === Accordion Styling (Refactored, No Header Border) === */
 
 /* Accordion container */
 .accordion {
@@ -113,7 +117,6 @@ main {
 
 /* Accordion item */
 .accordion-item {
-  border: 1px solid #ddd;
   border-radius: 6px;
   overflow: hidden;
   background: #fff;
@@ -124,27 +127,7 @@ main {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* === Accordion Styling (no borders) === */
-/* === Accordion Styling (no header border) === */
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.accordion-item {
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fff;
-  transition: box-shadow 0.2s ease;
-}
-
-.accordion-item.active {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* Accordion header */
+/* Accordion header (no border) */
 .accordion-header {
   display: flex;
   align-items: center;
@@ -156,7 +139,7 @@ main {
   background: #f9f9f9;
   cursor: pointer;
   transition: background 0.2s ease;
-  border: none; /* removed header border */
+  border: none; /* explicitly no header border */
 }
 
 .accordion-header:hover {
@@ -214,6 +197,7 @@ main {
 .accordion-content li {
   margin-bottom: 0.5rem;
 }
+
 /* === Contact Us Button Styling === */
 /* === Hero CTA Button Styling === */
 
@@ -290,11 +274,6 @@ main {
   animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
 /* Heading */
 .modal-content h2 {
   margin-bottom: 1rem;
@@ -368,15 +347,7 @@ main {
 .modal-button:last-of-type:hover {
   background: #bbb;
 }
-/* Ensure full height layout */
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
 
-
-  flex-direction: column;
-}
 
 
 /* Header */
@@ -389,18 +360,18 @@ html, body {
   margin-bottom: 2rem;   /* or try 3–4rem if you want more space */
 }
 /* Global font size tweak */
-body {
-  font-size: 1rem;   /* slightly smaller than default (usually 1rem) */
-  line-height: 1.5;    /* keep readability */
-}
+
 
 /* Headings scale down proportionally */
 h1 {
-  font-size: 1.8rem;   /* was ~2rem */
+  font-size: 2rem;   /* was ~2rem */
+  padding-bottom: 10px;
 }
 
 h2 {
   font-size: 1.4rem;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 p {
@@ -415,19 +386,15 @@ p {
 }
 
 /* Fluid container */
+/* Container */
 .container {
-  width: 100%;
-  max-width: 1400px;              /* cap on large screens */
-  margin: 0 auto;
-  padding: 0 1rem;                /* fluid gutter */
+  width: 100%;              /* always fill available width */
+  max-width: 1400px;        /* cap on large screens */
+  margin: 0 auto;           /* center horizontally */
+  padding: 0 1rem;          /* fluid gutter */
+  box-sizing: border-box;
 }
 
-/* Typography */
-body {
-  font-family: system-ui, sans-serif;
-  font-size: 1rem;                /* base size for mobile */
-  line-height: 1.6;
-}
 
 /* Responsive images */
 img {
@@ -473,29 +440,78 @@ img {
   flex: 1 1 100%;                 /* stack by default */
   margin-bottom: 1rem;
 }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
 
 /* Mobile first */
 @media (max-width: 767px) {
   .container {
-    padding: 0 10px;   /* tighter gutter on mobile */
+    padding: 0 0.625rem;   /* tighter gutter on mobile (10px) */
   }
 }
 
-/* Tablet */
+/* Tablet (≥768px) */
 @media (min-width: 768px) {
   .main-nav ul {
-    flex-direction: row;  /* horizontal nav */
+    flex-direction: row;
     gap: 1rem;
   }
 
   .column-box {
-    flex: 1 1 50%;        /* two columns */
+    flex: 1 1 calc(50% - 1rem);  /* two columns */
   }
 }
 
-/* Desktop */
+/* Desktop (≥1024px) */
 @media (min-width: 1024px) {
   .column-box {
-    flex: 1 1 33%;        /* three columns */
+    flex: 1 1 calc(33.333% - 1rem); /* three columns */
   }
+}
+.experience-panel {
+  background: #f5f5f5;          /* soft grey backdrop */
+  border-radius: 6px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.experience-panel h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.experience-panel p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+.hero-intro {
+  background: #f5f5f5;       /* full-width grey backdrop */
+  padding: 2rem 1rem 1rem;   /* top 2rem, sides 1rem, bottom 1rem */
+  text-align: center;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
+  animation: fadeIn 0.8s ease;
+  margin-bottom: 1rem;       /* reduce space below the grey box */
+}
+
+.hero-intro h1 {
+  font-size: 2.5rem;
+  margin-top: 1.5rem;        /* extra space above headline */
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hero-intro p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0;          /* keep copy close to bottom edge */
 }

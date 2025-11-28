@@ -11,9 +11,21 @@
   <!-- Header -->
   <div id="header-placeholder"></div>
 
+  <!-- Experience Matters drop-in -->
+  <section class="hero-intro">
+    <div class="container">
+      <h1>Experience Matters</h1>
+      <p>
+        Guidance from those who’ve been there before.
+        Proven expertise, not empty buzzwords.
+        Long‑term thinking in a short‑term world.
+      </p>
+    </div>
+  </section>
+
   <!-- Main content -->
   <main class="main-content">
-    <div class="container">
+    <div class="container two-column">
 
       <!-- Left column box -->
       <div class="column-left">
@@ -25,32 +37,52 @@
       <!-- Right column box -->
       <div class="column-right">
         <div class="column-box">
-          <section class="manifesto">
-            
-            <h1>Why Old Pros?</h1>
-            <p>
-              <strong>Old-Pros.co.uk</strong> exists to challenge age bias and short‑termism in today’s job market. 
-              While flashy titles and trend‑chasing roles often steal the spotlight, we believe seasoned professionals 
-              bring the resilience, wisdom, and proven delivery that businesses need most.
-            </p>
 
-            <h2>Our Mission</h2>
-            <p>
-              <strong>To champion experience over hype.</strong> We connect businesses with professionals who have delivered under pressure, 
-              learned from failure, and refined their craft over decades. Whether it’s strategic leadership, technical depth, creative thinking, or operational resilience, 
-              <b>Old Pros</b> matches proven capability with fresh opportunity.
-            </p>
+          <!-- Accordion -->
+          <section class="accordion">
 
-            <h2>Why Now?</h2>
-            <p>
-              <strong>It's about Experience.</strong> In the rush to chase the “next big thing,” companies are overlooking the huge value of experienced talent 
-              in a rapidly aging population. The market is saturated with HR buzzwords and burnout, while wisdom, 
-              stability, and long‑term thinking are ignored. <b>Old Pros</b> flips the script. We work with those who have built, rebuilt, and delivered lasting value — 
-              not just once, but time and again.
-            </p>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Why Old Pros?
+              </button>
+              <div class="accordion-content">
+                <p>
+                  <strong>Old-Pros.co.uk</strong> exists to challenge age bias and short‑termism in today’s job market. 
+                  While flashy titles and trend‑chasing roles often steal the spotlight, we believe seasoned professionals 
+                  bring the resilience, wisdom, and proven delivery that businesses need most.
+                </p>
+              </div>
+            </div>
 
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Our Mission
+              </button>
+              <div class="accordion-content">
+                <p>
+                  <strong>To champion experience over hype.</strong> We connect businesses with professionals who have delivered under pressure, 
+                  learned from failure, and refined their craft over decades. Whether it’s strategic leadership, technical depth, creative thinking, or operational resilience, 
+                  <b>Old Pros</b> matches proven capability with fresh opportunity.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Why Now?
+              </button>
+              <div class="accordion-content">
+                <p>
+                  <strong>It's about Experience.</strong> In the rush to chase the “next big thing,” companies are overlooking the huge value of experienced talent 
+                  in a rapidly aging population. The market is saturated with HR buzzwords and burnout, while wisdom, 
+                  stability, and long‑term thinking are ignored. <b>Old Pros</b> flips the script. We work with those who have built, rebuilt, and delivered lasting value — 
+                  not just once, but time and again.
+                </p>
+              </div>
+            </div>
 
           </section>
+
         </div>
       </div>
 
@@ -76,7 +108,7 @@
         </label>
         <label>
           Note
-          <textarea name="note" rows=4 cols="40"></textarea>
+          <textarea name="note" rows="4" cols="40"></textarea>
         </label>
 
         <input type="hidden" name="type" id="cta-type" />
@@ -91,10 +123,23 @@
   <!-- Footer -->
   <div id="footer-placeholder"></div>
 
+  <!-- Scripts -->
   <script src="/js/cta-d1.js"></script>
   <script src="/js/inject-header.js"></script>
   <script src="/js/inject-hero.js"></script>
   <script src="/js/inject-footer.js"></script>
-  
+
+  <!-- Accordion toggle script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".accordion-item");
+      items.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+        header.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
 </body>
 </html>

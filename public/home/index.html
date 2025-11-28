@@ -5,53 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Old Pros — Experience Matters</title>
   <link rel="stylesheet" href="/css/main.css" />
-
 </head>
 <body>
 
   <!-- Header -->
   <div id="header-placeholder"></div>
 
+  <!-- Experience Matters drop-in -->
+  <section class="hero-intro">
+    <div class="container">
+      <h1>Experience Matters</h1>
+      <p>
+        Guidance from those who’ve been there before.
+        Proven expertise, not empty buzzwords.
+        Long‑term thinking in a short‑term world.
+      </p>
+    </div>
+  </section>
+
   <!-- Main content -->
   <main class="main-content">
-    <div class="container">
+    <div class="container two-column">
 
       <!-- Left column box -->
       <div class="column-left">
         <div class="column-box">
           <div id="hero-placeholder"></div>
-
         </div>
       </div>
 
       <!-- Right column box -->
       <div class="column-right">
         <div class="column-box">
-          <section class="manifesto">
-            <h1>Why Old Pros?</h1>
-            <p>
-              <strong>Depth over dazzle:</strong> Proven expertise, not empty buzzwords.<br>
-              <strong>Delivery over drama:</strong> Results from people who’ve been there before.<br>
-              <strong>Wisdom over hype:</strong> Long‑term thinking in a short‑term world.
-            </p>
 
-            <h2>If your looking for</h2>
-              <p>
-                <strong>Advice:</strong> Actionable insights shaped by proven experience.<br>
-                <strong>Guidance:</strong> Clear pathways with checks that keep progress on track.<br>
-                <strong>Governance:</strong> Structures that safeguard value and sustain resilience.<br>
-                <strong>Leadership:</strong> Seasoned hands to steer your teams and projects.
-              </p>
+          <!-- Accordion -->
+          <section class="accordion">
 
-            <h2>What We Offer</h2>
-              <p>
-                <strong>Fractional Leadership: </strong>Experienced executives on a part-time basis.<br>
-                <strong>Short Term Engagement: </strong>Seasoned professionals for specific projects or interim roles.<br>
-                <strong>Advisory Services: </strong>Expert advice and strategic insights to guide your business decisions.<br>
-                <strong>Consulting: </strong>In-depth analysis and tailored solutions to address your unique challenges.
-              </p>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Why Old Pros?
+              </button>
+              <div class="accordion-content">
+                <p>
+                  <strong>Depth over dazzle:</strong> Proven expertise, not empty buzzwords.<br>
+                  <strong>Delivery over drama:</strong> Results from people who’ve been there before.<br>
+                  <strong>Wisdom over hype:</strong> Long‑term thinking in a short‑term world.
+                </p>
+              </div>
+            </div>
 
-         </section>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                If You’re Looking For
+              </button>
+              <div class="accordion-content">
+                <p>
+                  <strong>Advice:</strong> Actionable insights shaped by proven experience.<br>
+                  <strong>Guidance:</strong> Clear pathways with checks that keep progress on track.<br>
+                  <strong>Governance:</strong> Structures that safeguard value and sustain resilience.<br>
+                  <strong>Leadership:</strong> Seasoned hands to steer your teams and projects.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                What We Offer
+              </button>
+              <div class="accordion-content">
+                <p>
+                  <strong>Fractional Leadership:</strong> Experienced executives on a part-time basis.<br>
+                  <strong>Short Term Engagement:</strong> Seasoned professionals for specific projects or interim roles.<br>
+                  <strong>Advisory Services:</strong> Expert advice and strategic insights to guide your business decisions.<br>
+                  <strong>Consulting:</strong> In-depth analysis and tailored solutions to address your unique challenges.
+                </p>
+              </div>
+            </div>
+
+          </section>
+
         </div>
       </div>
 
@@ -61,46 +93,57 @@
   <!-- Modal placeholder -->
   <div id="modal-placeholder"></div>
 
-
-
+  <!-- CTA Modal -->
   <div id="cta-modal" class="modal hidden">
-  <div class="modal-content">
-    <h2>How can we help?</h2>
-    <form id="cta-form">
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Phone
-        <input type="tel" name="phone" />
-      </label>
-      <label>
-        Note
-        <textarea name="note" rows=4 cols="40"></textarea>
-      </label>
+    <div class="modal-content">
+      <h2>How can we help?</h2>
+      <form id="cta-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" />
+        </label>
+        <label>
+          Note
+          <textarea name="note" rows="4" cols="40"></textarea>
+        </label>
 
-      <input type="hidden" name="type" id="cta-type" />
-      <div class="modal-buttons">
-        <button type="submit" class="modal-button">Submit</button>
-        <button type="button" id="cta-close" class="modal-button">Close</button>
-      </div>
-    </form>
+        <input type="hidden" name="type" id="cta-type" />
+        <div class="modal-buttons">
+          <button type="submit" class="modal-button">Submit</button>
+          <button type="button" id="cta-close" class="modal-button">Close</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 
-<!-- Footer -->
-<div id="footer-placeholder"></div>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
 
+  <!-- Scripts -->
+  <script src="/js/cta-d1.js"></script>
+  <script src="/js/inject-header.js"></script>
+  <script src="/js/inject-hero.js"></script>
+  <script src="/js/inject-footer.js"></script>
 
-<script src="/js/cta-d1.js"></script>
-<script src="/js/inject-header.js"></script>
-<script src="/js/inject-hero.js"></script>
-<script src="/js/inject-footer.js"></script>
-
+  <!-- Accordion toggle script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".accordion-item");
+      items.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+        header.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
 </body>
 </html>
