@@ -518,3 +518,65 @@ img {
 .column-right .column-box {
   font-size: 0.9em;   /* 90% of base font size */
 }
+/* Mobile-first default */
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #333;   /* dark background for contrast */
+  padding: 1rem;
+}
+
+.main-nav a {
+  color: #fff;        /* white text for readability */
+  text-decoration: none;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  .main-nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    background: transparent; /* remove dark background */
+    padding: 0;
+  }
+
+  .main-nav a {
+    color: #222;      /* darker text on light background */
+  }
+}
+/* Global background */
+body {
+  background-color: #e6f0fa; /* light blue */
+  color: #222;              /* dark grey text */
+}
+
+/* Navigation */
+.main-nav {
+  background: #4a90e2;       /* medium blue */
+}
+
+.main-nav a {
+  color: #fff;               /* white text for contrast */
+}
+
+.main-nav a:hover {
+  color: #e6f0fa;            /* light blue hover */
+}
+
+/* Hero section */
+.hero-intro {
+  background: #e6f0fa;       /* keep consistent with body */
+  color: #222;
+}
+
+/* Buttons */
+.modal-button {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+}
+
+.modal-button:hover {
+  background: #357ab8;
+}
