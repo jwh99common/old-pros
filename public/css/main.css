@@ -5,11 +5,13 @@ body { font-family: Helvetica, Arial, sans-serif; line-height: 1.5; }
 /* Container */
 
 .container {
-  max-width: 1400px;   /* match EJ‑Antiques */
-  margin: 0 auto;      /* center horizontally */
-  padding: 0 20px;     /* consistent gutter */
+  width: 100%;                        /* always fill available width */
+  max-width: 1400px;                  /* cap on large screens */
+  margin: 0 auto;                     /* center horizontally */
+  padding: 0 20px;                    /* consistent gutter */
   box-sizing: border-box;
 }
+
 main .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -385,7 +387,7 @@ html, body {
 }
 /* Global font size tweak */
 body {
-  font-size: 1rem;   /* slightly smaller than default (usually 1rem) */
+  font-size: 1.5rem;   /* slightly smaller than default (usually 1rem) */
   line-height: 1.5;    /* keep readability */
 }
 
@@ -400,4 +402,9 @@ h2 {
 
 p {
   font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;   /* tighter gutter on mobile */
+  }
 }
