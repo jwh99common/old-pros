@@ -373,8 +373,11 @@ html, body {
   height: 100%;
   margin: 0;
   display: flex;
+
+
   flex-direction: column;
 }
+
 
 /* Header */
 .site-header {
@@ -387,7 +390,7 @@ html, body {
 }
 /* Global font size tweak */
 body {
-  font-size: 1.2rem;   /* slightly smaller than default (usually 1rem) */
+  font-size: 1rem;   /* slightly smaller than default (usually 1rem) */
   line-height: 1.5;    /* keep readability */
 }
 
