@@ -77,18 +77,19 @@ main {
 /* Fixed Footer */
 /* Footer container */
 .site-footer {
-  position: fixed;       /* pin to viewport */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #0047ab;   /* cobalt blue */
+  background: #0047ab;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
   z-index: 1000;
-  color: #fff;           /* default text in footer */
+  color: #fff;
 }
+
 
 /* Footer links */
 .site-footer a {
@@ -402,11 +403,7 @@ h2 {
 p {
   font-size: 0.95rem;
 }
-@media (max-width: 768px) {
-  .container {
-    padding: 0 10px;   /* tighter gutter on mobile */
-  }
-}
+
 /* Global reset */
 * {
   box-sizing: border-box;
@@ -456,15 +453,7 @@ img {
   text-decoration: underline;
 }
 
-/* Footer */
-.site-footer {
-  background: #0047ab;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  position: static;               /* avoid overlap on mobile */
-}
+
 
 .site-footer a {
   color: #fff;
@@ -482,20 +471,28 @@ img {
   margin-bottom: 1rem;
 }
 
-/* Breakpoints for larger screens */
+/* Mobile first */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;   /* tighter gutter on mobile */
+  }
+}
+
+/* Tablet */
 @media (min-width: 768px) {
   .main-nav ul {
-    flex-direction: row;          /* horizontal nav on tablet+ */
+    flex-direction: row;  /* horizontal nav */
     gap: 1rem;
   }
 
   .column-box {
-    flex: 1 1 50%;                /* two columns on tablet */
+    flex: 1 1 50%;        /* two columns */
   }
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
   .column-box {
-    flex: 1 1 33%;                /* three columns on desktop */
+    flex: 1 1 33%;        /* three columns */
   }
 }
