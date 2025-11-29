@@ -532,6 +532,6 @@ img {
 }
 
 .main-content {
-  width: 75%;
+  width: 100%;
   margin: 0 auto; /* centers the block */
 }
