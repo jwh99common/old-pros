@@ -530,3 +530,8 @@ img {
   padding: 2rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
 }
+
+.main-content {
+  width: 90%;
+  margin: 0 auto; /* centers the block */
+}
