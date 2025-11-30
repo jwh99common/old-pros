@@ -147,12 +147,17 @@ main {
 }
 
 /* Accordion image */
+
 .accordion-img {
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border-radius: 4px;
+  background-color: #0047ab; 
+  padding: 1px;                 /* smaller padding so border is visible */
+  border: 0.5px solid #0047ab;    /* standard thin border */
+  border-radius: 6px;
 }
+
 
 /* Arrow indicator */
 .accordion-header::after {
