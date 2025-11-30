@@ -540,3 +540,27 @@ img {
   width: 100%;
   margin: 0 auto; /* centers the block */
 }
+nav ul {
+  display: flex;
+  flex-wrap: wrap; /* allows items to stack neatly */
+  justify-content: space-around; /* spreads them evenly */
+}
+nav li {
+  flex: 1 1 auto; /* ensures each link shrinks/grows */
+}
+nav a {
+  color: #0047ab; /* cobalt blue for consistency */
+}
+nav a:hover {
+  color: #002f6c; /* darker shade for hover */
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* stack vertically */
+    align-items: flex-start;
+  }
+  nav a {
+    color: #0047ab; /* ensure readable contrast */
+    padding: 0.5rem 1rem;
+  }
+}
