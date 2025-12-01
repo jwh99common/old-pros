@@ -4,7 +4,7 @@
   --header-height: 4rem;
   --footer-height: 3rem;
   --font-family: system-ui, sans-serif;
-  --max-width: 960px;
+  --max-width: 1200px;
   --spacing: 1rem;
 }
 
@@ -30,8 +30,8 @@ html, body {
   width: 100%;
   max-width: 90vw;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /*padding-left: 0rem;
+  padding-right: 0rem;*/
 }
 
 @media (min-width: 1200px) {
@@ -176,13 +176,13 @@ h1, h2, h3, p, ul, li {
 
 @media (min-width: 768px) {
   .container {
-    display: flex; /* ❌ This is overriding your grid layout */
+    display: flex; 
     gap: var(--spacing);
   }
 
   .column-left,
   .column-right {
-    width: 50%; /* ❌ Not needed with grid */
+    width: 50%; 
   }
 }
 
