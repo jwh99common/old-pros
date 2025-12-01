@@ -578,6 +578,7 @@ footer {
 }
 
 
+
 .hero-intro h1 {
   font-size: 1.75rem;
   font-weight: 700;
@@ -590,4 +591,12 @@ footer {
   margin: 0 auto;
   max-width: 1200px;
   color: #333;
+}
+
+.column-left,
+.column-right {
+  border: 5px solid var(--light-blue);
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #fff; /* optional: keeps content clean inside */
 }
