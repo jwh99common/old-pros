@@ -1,0 +1,539 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  font-family: Helvetica, Arial, sans-serif; 
+  line-height: 1.5; 
+  font-size: 1rem
+}
+
+/* Ensure full height layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+
+
+  flex-direction: column;
+}
+
+
+main .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: #0047ab;
+  color: #fff;
+  z-index: 1000;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: bold;
+}
+
+/* Nav */
+.main-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;   /* keep nav links larger */
+  text-transform: uppercase; /* optional for impact */
+  letter-spacing: 0.5px;     /* subtle spacing for readability */
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Decorative band */
+.gold-band {
+  height: 8px;
+  background: linear-gradient(to right, gold 70%, #0047ab 30%);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding-top: 0px;   /* offset fixed header */
+  padding-bottom: 20px;
+}
+
+/* Fixed Footer */
+/* Footer container */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0047ab;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  color: #fff;
+}
+
+
+/* Footer links */
+.site-footer a {
+  color: #fff;           /* force links to white */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+/* === Accordion Styling (Refactored, No Header Border) === */
+
+/* Accordion container */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Accordion item */
+.accordion-item {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+}
+
+.accordion-item.active {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Accordion header (no border) */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background:#cfe4f9;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: none; /* explicitly no header border */
+}
+
+.accordion-header:hover {
+  background: #b7d4f5;
+}
+
+/* Accordion image */
+
+.accordion-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background-color: #0047ab; 
+  padding: 1px;                 /* smaller padding so border is visible */
+  border: 0.5px solid #0047ab;    /* standard thin border */
+  border-radius: 6px;
+}
+
+
+/* Arrow indicator */
+.accordion-header::after {
+  content: "›";
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: #0047ab; /* cobalt blue */
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+  transform: rotate(90deg);
+  color: rgb(13, 13, 13); /* accent when open */
+}
+
+/* Accordion content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  background: #fff;
+  border-left: 3px solid #0047ab; /* brand accent */
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 600px; /* enough to show text */
+  padding: 1rem;
+}
+
+/* Content text */
+.accordion-content p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.accordion-content ul {
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.accordion-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* === Contact Us Button Styling === */
+/* === Hero CTA Button Styling === */
+
+/* === Hero CTA Button Styling (Large, Left-Aligned, Blue Border) === */
+
+.cta-buttons {
+  margin-top: 2rem;
+  text-align: left; /* align button to the left under hero text */
+}
+
+.cta {
+  display: inline-block;
+  padding: 1rem 2rem;          /* larger size */
+  font-size: 1.2rem;           /* bigger text */
+  font-weight: 700;
+  color: #000;                 /* black text */
+  background: #ffeb3b;         /* bright yellow background */
+  border: 3px solid #0047ab;   /* bold cobalt blue border */
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.cta:hover {
+  background: #fdd835;         /* slightly darker yellow on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.cta:active {
+  background: #fbc02d;         /* pressed state */
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+
+/* Optional gold variant for emphasis */
+.cta.gold {
+  background: gold;
+  color: #0047ab;
+}
+
+.cta.gold:hover {
+  background: #e6c200;
+}
+/* === Modal Styling === */
+
+/* Overlay */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* semi-transparent backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Heading */
+.modal-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #0047ab; /* brand cobalt blue */
+}
+
+/* Form fields */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+  width: 100%;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #0047ab;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,71,171,0.2);
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-button {
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-button:first-of-type {
+  background: #0047ab;
+  color: #fff;
+}
+
+.modal-button:first-of-type:hover {
+  background: #003a8c;
+  transform: translateY(-2px);
+}
+
+.modal-button:last-of-type {
+  background: #ccc;
+  color: #333;
+}
+
+.modal-button:last-of-type:hover {
+  background: #bbb;
+}
+
+
+
+/* Header */
+.site-header {
+  flex-shrink: 0; /* stays at top */
+}
+
+/* Add bottom spacing to column boxes */
+.column-box {
+  margin-bottom: 2rem;   /* or try 3–4rem if you want more space */
+}
+/* Global font size tweak */
+
+
+/* Headings scale down proportionally */
+h1 {
+  font-size: 2rem;   /* was ~2rem */
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+p {
+  font-size: 0.95rem;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fluid container */
+/* Container */
+.container {
+  width: 100%;              /* always fill available width */
+  max-width: 1400px;        /* cap on large screens */
+  margin: 0 auto;           /* center horizontally */
+  padding: 0 1rem;          /* fluid gutter */
+  box-sizing: border-box;
+}
+
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation */
+.main-nav ul {
+  display: flex;
+  flex-direction: column;         /* stack by default */
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Columns */
+.column-box {
+  flex: 1 1 100%;                 /* stack by default */
+  margin-bottom: 1rem;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+
+.experience-panel {
+  background: #f5f5f5;          /* soft grey backdrop */
+  border-radius: 6px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.experience-panel h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.experience-panel p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+.hero-intro {
+  /*background: #f5f5f5;*/       /* full-width grey backdrop */
+  padding: 2rem 1rem 1rem;   /* top 2rem, sides 1rem, bottom 1rem */
+  text-align: center;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
+  animation: fadeIn 0.8s ease;
+  margin-bottom: 1rem;       /* reduce space below the grey box */
+}
+
+.hero-intro h1 {
+  font-size: 2rem;
+  margin-top: 1.5rem;        /* extra space above headline */
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hero-intro p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0;          /* keep copy close to bottom edge */
+}
+.column-right .column-box {
+  font-size: 0.9em;   /* 90% of base font size */
+}
+.column-left {
+  flex: 1 1 100%;          /* full width on mobile */
+  margin-bottom: 1rem;
+}
+
+.column-box {
+  background: #ffffff;      /* white content background */
+  border: 2px solid #cfe4f9; /* light blue border */
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+.main-content {
+  width: 100%;
+  margin: 0 auto; /* centers the block */
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap; /* allows items to stack neatly */
+  justify-content: space-around; /* spreads them evenly */
+}
+nav li {
+  flex: 1 1 auto; /* ensures each link shrinks/grows */
+}
+nav a {
+  color: #0047ab; /* cobalt blue for consistency */
+}
+nav a:hover {
+  color: #002f6c; /* darker shade for hover */
+}
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
