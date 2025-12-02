@@ -607,35 +607,58 @@ footer {
   gap: 0.5rem;         /* space between logo and text */
 }
 
-.logo {
-  width: 60px;
-  height: 80px;
-  object-fit: contain;   /* keeps proportions inside the box */
-  border: 1px solid blue; /* thin blue border */
-  border-radius: 4px;     /* optional: slightly rounded corners */
-  margin-top: 2rem;       /* pushes the logo down */
+/* Header Navigation */
+.nav {
+  background-color: var(--light-blue); /* matches header/footer */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Tablet screens (≤768px) */
+/* Brand Container */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Animated Logo Video */
+.logo {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  border: 1px solid blue;
+  border-radius: 4px;
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+  top: 0.2rem; /* nudges video down slightly */
+}
+
+/* Brand Text */
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black; /* overrides inherited white */
+}
+
+
+/* Responsive Scaling */
 @media (max-width: 768px) {
   .logo {
     width: 45px;
-    height: 60px;
-    margin-top: 1rem; /* reduce spacing */
   }
 }
 
-/* Mobile screens (≤480px) */
 @media (max-width: 480px) {
   .logo {
     width: 30px;
-    height: 40px;
-    margin-top: 0.5rem;
   }
 }
-
-
-.brand-text {
-  font-size: 1.25rem;  /* adjust as needed */
-  font-weight: bold;
+.logo {
+  position: relative;
+  top: 0.5rem; /* adjust this value as needed */
 }
