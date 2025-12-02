@@ -600,3 +600,23 @@ footer {
   border-radius: 4px;
   background-color: #fff; /* optional: keeps content clean inside */
 }
+
+.nav-brand {
+  display: flex;
+  align-items: center; /* vertically align logo and text */
+  gap: 0.5rem;         /* space between logo and text */
+}
+
+.logo {
+  width: 60px;
+  height: 80px;
+  object-fit: contain;   /* keeps proportions inside the box */
+  border: 1px solid blue; /* thin blue border */
+  border-radius: 4px;     /* optional: slightly rounded corners */
+  margin-top: 2rem;       /* pushes the logo down */
+}
+
+.brand-text {
+  font-size: 1.25rem;  /* adjust as needed */
+  font-weight: bold;
+}
