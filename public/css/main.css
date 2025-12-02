@@ -616,6 +616,25 @@ footer {
   margin-top: 2rem;       /* pushes the logo down */
 }
 
+/* Tablet screens (≤768px) */
+@media (max-width: 768px) {
+  .logo {
+    width: 45px;
+    height: 60px;
+    margin-top: 1rem; /* reduce spacing */
+  }
+}
+
+/* Mobile screens (≤480px) */
+@media (max-width: 480px) {
+  .logo {
+    width: 30px;
+    height: 40px;
+    margin-top: 0.5rem;
+  }
+}
+
+
 .brand-text {
   font-size: 1.25rem;  /* adjust as needed */
   font-weight: bold;
