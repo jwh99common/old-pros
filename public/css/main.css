@@ -662,3 +662,20 @@ footer {
   position: relative;
   top: 0.5rem; /* adjust this value as needed */
 }
+.brand-text {
+  font-size: 48px;
+  font-weight: 900;
+  display: inline-flex;
+  gap: 0.25em;
+}
+
+.brand-text .old {
+  /*background-color: black;*/
+  color: rgb(3, 6, 162);
+  padding: 0.1em 0.4em;
+  border-radius: 0.2em;
+}
+
+.brand-text .pros {
+  color: #FFD700; /* Gold/yellow */
+}
