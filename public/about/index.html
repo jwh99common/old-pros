@@ -132,7 +132,6 @@ Guidance from those who’ve been there before. Proven expertise, not empty buzz
       </p>
     </div>
 
-
   </section>
 
   <!-- Main content -->
@@ -144,6 +143,81 @@ Guidance from those who’ve been there before. Proven expertise, not empty buzz
         <div class="column-box">
           <div id="hero-placeholder"></div>
         </div>
+        <h2>Meet The Team</h2>
+        <div class="team-carousel">
+
+          <!-- Jamie -->
+          <div class="team-slide active">
+            <div class="team-slide-inner">
+              <img src="/images/jamie.jpg" alt="Jamie Whitcombe-Jone" class="team-photo">
+              <div class="team-info">
+                <h3>Jamie Whitcombe-Jone</h3>
+                <p>Cyber Security • CISO • Financial Services</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Martin -->
+          <div class="team-slide">
+            <div class="team-slide-inner">
+              <img src="/images/martin.jpg" alt="Martin Warren" class="team-photo">
+              <div class="team-info">
+                <h3>Martin Warren</h3>
+                <p>Programme Delivery • Higher Education • Public Sector</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Joanna -->
+          <div class="team-slide">
+            <div class="team-slide-inner">
+              <img src="/images/joanna.jpg" alt="Joanna Tomasso" class="team-photo">
+              <div class="team-info">
+                <h3>Joanna Tomasso</h3>
+                <p>Client Partnerships • Relationship Building • Strategy</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- John -->
+          <div class="team-slide">
+            <div class="team-slide-inner">
+              <img src="/images/jwh.jpg" alt="John Hardie" class="team-photo">
+              <div class="team-info">
+                <h3>John Hardie</h3>
+                <p>Program Delivery • Program Recovery • PMO Setup</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mat -->
+          <div class="team-slide">
+            <div class="team-slide-inner">
+              <img src="/images/mat.jpg" alt="Mat Loup" class="team-photo">
+              <div class="team-info">
+                <h3>Mat Loup</h3>
+                <p>Thought Leadership • Media Posture • Reputation Management</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Malcolm -->
+          <div class="team-slide">
+            <div class="team-slide-inner">
+              <img src="/images/malcolm.jpg" alt="Malcolm Harding" class="team-photo">
+              <div class="team-info">
+                <h3>Macolm Harding</h3>
+                <p>Commercial Contracts • Vendor Management • Outsourcing Management</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel buttons -->
+          <button class="carousel-prev">‹</button>
+          <button class="carousel-next">›</button>
+
+        </div><!-- end team-carousel -->
+
       </div>
 
       <!-- Right column box -->
@@ -243,7 +317,34 @@ Guidance from those who’ve been there before. Proven expertise, not empty buzz
   <script src="/js/inject-header.js"></script>
   <script src="/js/inject-hero.js"></script>
   <script src="/js/inject-footer.js"></script>
+  <script>
+  const slides = document.querySelectorAll('.team-slide');
+  const nextBtn = document.querySelector('.carousel-next');
+  const prevBtn = document.querySelector('.carousel-prev');
 
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  // Optional auto-rotate
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 6000);
+</script>
   <!-- Accordion toggle script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {

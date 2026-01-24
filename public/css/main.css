@@ -682,3 +682,98 @@ footer {
 .brand-text .pros {
   color: #FFD700; /* Gold/yellow */
 }
+.team-carousel {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.team-slide {
+  display: none;
+  text-align: left;
+  animation: fade 0.4s ease-in-out;
+}
+
+.team-slide.active {
+  display: block;
+}
+
+.team-slide img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  background-color: #0047ab;
+  padding: 1px;
+  border: 0.5px solid #fff;
+  border-radius: 6px;
+}
+
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  opacity: 0.8;
+}
+
+.carousel-prev {
+  left: -0.5rem;
+}
+
+.carousel-next {
+  right: -0.5rem;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.team-slide {
+  display: none;
+  animation: fade 0.4s ease-in-out;
+}
+
+.team-slide.active {
+  display: block;
+}
+
+.team-slide-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1.5rem; /* indent so left arrow is visible */
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  background-color: #0047ab;
+  padding: 1px;
+  border: 0.5px solid #fff;
+  border-radius: 6px;
+}
+
+.team-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.team-info p {
+  margin: 0.25rem 0 0;
+  opacity: 0.8;
+}
